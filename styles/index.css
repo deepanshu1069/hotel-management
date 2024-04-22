@@ -1,0 +1,157 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #E0E0E0;
+    font-family: 'Ubuntu',sans-serif;
+}
+#main-div{
+    margin:0;
+    padding: 0;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+content{
+    display: block;
+    position: relative;
+    top: 60px;
+    padding-bottom: 60px;
+}
+
+#SearchBarDiv{
+    height: 380px;
+    background-image: url('https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+#SearchBarDiv div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.searchBarCards{
+    margin: 0 auto;
+    margin-bottom: 2px;
+    background-color: #f1f1f1;
+    padding:10px;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: transparent;
+    font-size: 12px;
+    width: 30%;
+    display: inline;
+    height: 20;
+}
+.result{
+    
+    background-color: white;
+    cursor: pointer;
+}
+.searchBarCards:focus{
+    outline-color: transparent;
+}
+.citycards{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+}
+.imageContainer{
+    position: relative;
+    border-radius: 25%;
+    cursor: pointer;
+    
+}
+.hotel-images{
+    height: 150px;
+    width: 150px;
+    box-shadow: 10px 10px 10px gray;
+    display: block;
+    border-radius: 25%;
+}
+.imageHoverText{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    opacity: 0;
+    z-index: 3;
+    color: white;
+    
+}
+.imageContainer:hover{
+    background-color: black;
+}
+.imageContainer:hover .hotel-images{
+    opacity: 0.5;
+}
+.imageContainer:hover .imageHoverText
+{
+    opacity: 1;
+}
+
+
+
+#ViewMore{
+    padding-top: 2%;
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: center;
+   
+}
+#ViewMore a{
+    text-align: center;
+
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (max-width:576px){
+    #searchbar{
+        width: 60%;
+    }
+    .citycards{
+        flex-direction: column;
+    }
+    .imageContainer{
+        margin: 3% 0;
+    }
+    .hotel-images{
+        height: 180px;
+        width: 180px;
+        
+    }
+}
+@media screen and (min-width:576px) and (max-width:768px){
+    #searchbar{
+        width: 60%;
+    }
+    .citycards{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-row-gap: 5%;
+    }
+    .imageContainer{
+        margin: 3% 0;
+    }
+    .hotel-images{
+        height: 180px;
+        width: 180px;
+        
+    }
+}
+
